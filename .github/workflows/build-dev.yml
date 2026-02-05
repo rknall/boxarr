@@ -6,7 +6,10 @@ name: Build Development Images
 
 on:
   push:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
+      - 'claude/**'  # Allow builds from claude branches
     paths-ignore:
       - '**.md'
       - 'docs/**'
