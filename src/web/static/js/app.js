@@ -1395,7 +1395,7 @@ function reloadScheduler() {
                     window.location.href = makeUrl('/dashboard');
                 }, 1500);
             } else {
-                showMessage('Failed to save: ' + (data.error || 'Unknown error'), 'error');
+                showMessage('Failed to save: ' + (data.message || data.error || 'Unknown error'), 'error');
             }
         })
         .catch(error => {
